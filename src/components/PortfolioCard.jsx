@@ -1,32 +1,20 @@
-// //props사용
-// const PortfolioCard = (props) => {
-//   return (
-//     <li className="bg-purple-300 w-60 h-72 rounded-xl">
-//       {/* object-fit : -cover */}
-//       <div className="bg-yellow-100 w-full h-1/2 rounded-t-xl">
-//         <img src="{props.img}"></img>
-//       </div>
-//       <div className="text-xl font-bold mt-2 mx-2">{props.title}</div>
-//       <div className="mt-2 mx-2">{props.content}</div>
-//     </li>
-//   );
-// };
+import { Link } from "react-router-dom";
 
-// export default PortfolioCard;
-
-// //구조분해 UseEffect사용--------------------------------------------------------
-import { useEffect } from "react";
-
-function PortfolioCard({ title, desc, image }) {
-  useEffect(() => {
-    console.log(title);
-    console.log(desc);
-    console.log(image);
-  }, []);
+function PortfolioCard({ title, desc, image, index }) {
+  const colors = [
+    "bg-orange-300",
+    "bg-yellow-300",
+    "bg-green-300",
+    "bg-teal-300",
+    "bg-sky-300",
+    "bg-indigo-300",
+    "bg-purple-300",
+    "bg-pink-300",
+  ];
 
   return (
-    <li className="bg-purple-100 w-60 h-72 rounded-xl">
-      <div className="bg-yellow-100 w-full h-1/2 rounded-t-xl">
+    <li className="relative bg-white w-60 h-72 rounded-xl shadow-lg">
+      <div className="relative bg-yellow-100 w-full h-1/2 rounded-t-xl">
         <img
           className="w-full h-full object-cover rounded-xl"
           src={`${process.env.PUBLIC_URL}/${image}`}
@@ -35,7 +23,15 @@ function PortfolioCard({ title, desc, image }) {
       </div>
       <div className="text-xl font-bold mt-2 mx-2">{title}</div>
       <div className="mt-2 mx-2">{desc}</div>
-      {/* <button className="absolute bottom-0 right-0 m-4 px-4 py-2 rounded-lg bg-red-200"></button> */}
+      <Link to={`/project/${index}?title=${title}&desc=${desc}&image=${image}`}>
+        <button
+          className={`absolute bottom-0 right-0 m-4 px-4 py-2 rounded-md ${
+            colors[index % colors.length]
+          }`}
+        >
+          View
+        </button>
+      </Link>
     </li>
   );
 }

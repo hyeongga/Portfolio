@@ -1,21 +1,22 @@
 //import ReactLogo from "./images/react.png";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Introduce from "./components/Introduce";
-import Portfolio from "./components/Portfolio";
-import ContactMe from "./components/ContactMe";
 import Footer from "./components/Footer";
+import Main from "./pages/Main";
+import Project from "./pages/Project";
 
 function App() {
   return (
-    <div className="bg-red-100 min-h-screen">
-      <Header />
-      <main>
-        <Introduce />
-        <Portfolio />
-        <ContactMe />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="bg-red-100 min-h-screen flex flex-col">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/Project/:projectIndex" element={<Project />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

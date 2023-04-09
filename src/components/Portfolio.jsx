@@ -8,11 +8,11 @@ const Portfolio = () => {
         return (
           <PortfolioCard
             key={i}
-            // index={i}
+            index={i}
             image={v.pjtImg}
             title={v.pjtTitle}
             desc={v.pjtDesc}
-          />
+          /> //link할때 url 주소에 숫자부여
         );
       })}
     </ul>
