@@ -1,0 +1,44 @@
+[
+  {
+    "pjtImg": "images/react.png",
+    "pjtTitle": "Start Screen",
+    "pjtDesc": ["1. ", "2. "]
+  },
+  {
+    "pjtImg": "images/react.png",
+    "pjtTitle": "Calculator",
+    "pjtDesc": ["1. ", "2. "]
+  },
+  {
+    "pjtImg": "images/react.png",
+    "pjtTitle": "Portfolio",
+    "pjtDesc": ["1. ", "2. "]
+  },
+  {
+    "pjtImg": "images/react.png",
+    "pjtTitle": "⚙준비중",
+    "pjtDesc": ["1. ", "2. "]
+  },
+  {
+    "pjtImg": "images/react.png",
+    "pjtTitle": "⚙준비중",
+    "pjtDesc": ["1. ", "2. "]
+  },
+  {
+    "pjtImg": "images/react.png",
+    "pjtTitle": "⚙준비중",
+    "pjtDesc": ["1. ", "2. "]
+  },
+
+  {
+    "pjtImg": "images/react.png",
+    "pjtTitle": "⚙준비중",
+    "pjtDesc": ["1. ", "2. "]
+  },
+
+  {
+    "pjtImg": "images/react.png",
+    "pjtTitle": "⚙준비중",
+    "pjtDesc": ["🛩️ 해외 출장", "🍰 내 생일"]
+  }
+]
