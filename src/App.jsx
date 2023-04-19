@@ -8,7 +8,7 @@ import Project from "./pages/Project";
 function App() {
   return (
     <BrowserRouter>
-      <div className="bg-red-100 min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col">
         <Header />
         <Routes>
           <Route path="/" element={<Main />} />

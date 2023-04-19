@@ -6,8 +6,6 @@ const Main = () => {
   return (
     <main>
       <Introduce />
-      <Portfolio />
-      <ContactMe />
     </main>
   );
 };
