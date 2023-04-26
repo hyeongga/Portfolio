@@ -1,5 +1,6 @@
-import ContactMe from "../components/ContactMe";
+import ContactMe from "../components/Contact";
 import Introduce from "../components/Introduce";
+
 import Portfolio from "../components/Portfolio";
 
 const Main = () => {

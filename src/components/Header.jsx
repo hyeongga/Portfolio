@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { HiHeart } from "react-icons/hi2";
 import { HiOutlineHeart } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [likes, setLikes] = useState(false);
@@ -14,17 +15,37 @@ const Header = () => {
     }
   };
   return (
-    <header className=" h-12 md:h-20">
-      <div className="max-w-screen-xl mx-auto h-full flex justify-between items-center">
-        <div>
-          H's Portfolio
-          {/* <img className="w-12" src={ReactLogo} alt="React" /> */}
+    <header className="h-28">
+      <div className="max-w-full h-full flex justify-between items-center px-6">
+        <div className="px-4">
+          <Link to="/">
+            <button className="flex items-center">
+              <img
+                className="w-10 rounded-full"
+                src={`${process.env.PUBLIC_URL}/images/7.png`}
+                alt="logo"
+              />
+              <div className="ml-2">HyeongA </div>
+            </button>
+          </Link>
         </div>
         <ul className="flex gap-2 md:gap-8 text-xs sm:text-sm md:text-base">
-          <li className="">Introduce</li>
-          <li className="">Portfolio</li>
-          <li className="">Contact Me</li>
-          <div className="">
+          <Link to="/">
+            <li className="">HOME</li>
+          </Link>
+
+          <Link to="/Portfolio">
+            <li className="">PROJECT</li>
+          </Link>
+
+          <Link to="/Introduce">
+            <li className="">ABOUT</li>
+          </Link>
+          <Link to="/Contact">
+            <li className="">CONTACT</li>
+          </Link>
+
+          <button className="relative" onClick={onClickToggle}>
             {likes ? (
               <HiHeart
                 onClick={onClickToggle}
@@ -40,8 +61,8 @@ const Header = () => {
                 color="purple"
               />
             )}
-          </div>
-          <li className="px-2 py-1">{count}</li>
+            <div className="absolute top-1 left-3 text-white t">{count}</div>
+          </button>
         </ul>
       </div>
     </header>
