@@ -37,7 +37,7 @@ const Aboutme = () => {
         <div className="flex flex-col gap-4 text-[#e5e0ec]">
           <div className="flex  gap-3">
             <SiNotion size={24} />
-            <Link to="https://www.notion.so/0c65a08fc86f4bba92ac73af90121417">
+            <Link to="https://galvanized-need-1fa.notion.site/0c65a08fc86f4bba92ac73af90121417?pvs=4">
               이력서 주소
             </Link>
           </div>
