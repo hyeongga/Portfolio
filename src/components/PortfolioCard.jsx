@@ -25,7 +25,7 @@ function PortfolioCard({ title, desc, image, index }) {
     <li className="relative bg-yellow-300 w-80 h-62 rounded-xl shadow-lg">
       <img
         className="w-full h-full object-cover rounded-xl"
-        src={`${process.env.PUBLIC_URL}/${image}`}
+        src={`./${image}`}
         alt="project image"
         onMouseOver={onMouseOver}
         onMouseOut={onMouseOut}
