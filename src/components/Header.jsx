@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { HiHeart } from "react-icons/hi2";
 import { HiOutlineHeart } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [likes, setLikes] = useState(false);
@@ -14,17 +15,25 @@ const Header = () => {
     }
   };
   return (
-    <header className="bg-blue-100 h-12 md:h-20">
-      <div className="max-w-screen-xl mx-auto h-full flex justify-between items-center">
-        <div>
-          H's Portfolio
-          {/* <img className="w-12" src={ReactLogo} alt="React" /> */}
+    <header className="flex justify-center w-full h-[72px] ">
+      <div className="flex justify-between items-center w-[1140px] p-4 ">
+        <div className=" text-[24px] text-[#453a33] font-bold h-10 items-center">
+          <Link to="/">HyeongA</Link>
         </div>
-        <ul className="flex gap-2 md:gap-8 text-xs sm:text-sm md:text-base">
-          <li className="bg-indigo-300 btn-style">Introduce</li>
-          <li className="bg-indigo-500 btn-style">Portfolio</li>
-          <li className="bg-indigo-700 btn-style">Contact Me</li>
-          <div className="">
+        {/* <ul className=" flex gap-7 h-10 items-center">
+          <Link to="/">
+            <li className="text-[16px] text-[#453a33] font-bold ">HOME</li>
+          </Link>
+          <Link to="/Introduce">
+            <li className="text-[16px] text-[#453a33] font-bold">INTRODUCE</li>
+          </Link>
+          <Link to="/Portfolio">
+            <li className="text-[16px] text-[#453a33] font-bold ">PROJECT</li>
+          </Link>
+          <Link to="/Contact">
+            <li className="text-[16px] text-[#453a33] font-bold">CONTACT</li>
+          </Link>
+          <button className="relative" onClick={onClickToggle}>
             {likes ? (
               <HiHeart
                 onClick={onClickToggle}
@@ -40,9 +49,9 @@ const Header = () => {
                 color="purple"
               />
             )}
-          </div>
-          <li className="px-2 py-1">{count}</li>
-        </ul>
+            <div className="absolute top-1 left-3 text-white t">{count}</div>
+          </button>
+        </ul> */}
       </div>
     </header>
   );
